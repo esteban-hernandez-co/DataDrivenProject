@@ -1,0 +1,20 @@
+﻿body {
+    font-size: 16px;
+}
+.containerApp {
+    flex:1;
+    flex-direction:row;
+    width:85%;
+}
+.title{
+    font-size: 40px;
+    font-weight:400;
+    text-align:center;
+    margin-bottom: 40px;
+}
+
+.questionTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
