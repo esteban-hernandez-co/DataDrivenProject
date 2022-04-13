@@ -57,3 +57,8 @@ C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debu
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.csproj.CopyComplete
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.dll
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.pdb
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Controller.dll
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.dll
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Controller.pdb
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.pdb
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.dll.config

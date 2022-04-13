@@ -11,7 +11,8 @@ namespace data_driven_apps_pr
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Redirect to index
+            Response.Redirect("Index.aspx");
         }
     }
 }

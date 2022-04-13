@@ -18,3 +18,15 @@
     margin-bottom: 20px;
 }
 
+.mainSection {
+    min-height: 30rem;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    background: aliceblue;
+    border-radius: 20px;
+}
+.footer {
+    color: #7c7b7b;
+    text-align: center;
+}
