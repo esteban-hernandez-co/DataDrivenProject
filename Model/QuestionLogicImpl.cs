@@ -37,8 +37,8 @@ namespace Model
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-    }
-}
+            }
+        }
 
         public int insertQuestion(int questionId, string name, int question_parent, string description, string question, int question_type_id, string answer_control, string format, int is_multiple, int max_answers, int question_order, int question_sub_order, DateTime created_at, int created_by)
         {

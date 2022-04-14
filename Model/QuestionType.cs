@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class QuestionType
+    public class QuestionType
     {
         int questionTypeId;
         string name;

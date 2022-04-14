@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class QuestionTypeLogicImpl : IQuestionTypeLogic
+    public class QuestionTypeLogicImpl : IQuestionTypeLogic
     {
         public int deleteQuestionType(QuestionType questionType)
         {

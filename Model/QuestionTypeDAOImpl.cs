@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class QuestionTypeDAOImpl : IQuestionTypeDAO
+    public class QuestionTypeDAOImpl : IQuestionTypeDAO
     {
         public int deleteQuestionTypeById(int questionTypeId)
         {
@@ -110,7 +110,7 @@ namespace Model
             {
                 //get the Data set
                 question_typeTableAdapter objQuestionTableAdapter = new question_typeTableAdapter();
-                //call the query all Question type
+                
                 int insertStatus = objQuestionTableAdapter.InsertQuestionType(questionTypeName, answerControl);
                 return insertStatus;
             }

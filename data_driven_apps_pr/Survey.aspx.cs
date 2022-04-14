@@ -52,7 +52,9 @@ namespace data_driven_apps_pr
                 {
                     lblQuestion.Text = questionnaireNode.CurrentQuestion.Name;
                     lblQuestionTitle.Text = questionnaireNode.CurrentQuestion.QuestionText;
+                    ShowQuestionAndOptions(questionnaireNode.CurrentQuestion);
                     AppSession.setCurrentNode(questionnaireNode.Next);
+                    
 
                     Label lblcontrol = new Label();
                     lblcontrol.Text = "This a dynamic label";
@@ -95,6 +97,7 @@ namespace data_driven_apps_pr
                 {
                     lblQuestion.Text = questionnaireNode.CurrentQuestion.Name;
                     lblQuestionTitle.Text = questionnaireNode.CurrentQuestion.QuestionText;
+                    ShowQuestionAndOptions(questionnaireNode.CurrentQuestion);
                     AppSession.setCurrentNode(questionnaireNode.Next);
                 }
 
@@ -102,6 +105,29 @@ namespace data_driven_apps_pr
             }
         }
         
+        private void ShowQuestionAndOptions(QuestionDTO questionDTO)
+        {
+            //Show name and question title
+            lblQuestion.Text = questionDTO.Name;
+            lblQuestionTitle.Text = questionDTO.QuestionText;
+
+            //get type of question
+
+
+            //Get list of options
+            IQuestionOptionController questionOptionController = new QuestionOptionControllerImpl();
+            List<QuestionOptionDTO> listQuestionsOptions = questionOptionController.getAllQuestionOptionsByQuestionId(questionDTO.QuestionId);
+
+            if(listQuestionsOptions == null)
+            {
+                //No options found
+            }
+            else
+            {
+
+            }
+
+        }
         private String GetIpAddress()
         {
             String userip = Request.UserHostAddress;
@@ -136,7 +162,7 @@ namespace data_driven_apps_pr
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
-
+            //validate no errors are on form
         }
     }
     
