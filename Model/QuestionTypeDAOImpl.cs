@@ -67,7 +67,49 @@ namespace Model
                 throw new Exception(ex.Message);
             }
         }
-    
+
+        public List<QuestionType> getAllQuestionTypeOrderByName()
+        {
+            try
+            {
+                //get the Data set
+                question_typeTableAdapter objQuestionTableAdapter = new question_typeTableAdapter();
+                //call the query all Question type
+                QuestionTypeDataSet.question_typeDataTable objQuestionTypeDataTable = objQuestionTableAdapter.GetAllQuestionTypeOrderByName();
+
+                int dataCount = objQuestionTypeDataTable.Count;
+                //If no data has been found
+                if (dataCount == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    //if data is found
+                    List<QuestionType> lstQuestionType = new List<QuestionType>();
+
+                    //foreach 
+                    //if you don't know what a foreach is go back to Foundation Programming :P
+                    foreach (DataRow row in objQuestionTypeDataTable.Rows)
+                    {
+
+                        QuestionType objQuestionType = new QuestionType();
+                        objQuestionType.QuestionTypeId = Convert.ToInt32(row["id"].ToString());
+                        objQuestionType.Name = row["name"].ToString();
+                        objQuestionType.AnswerControl = row["answer_control"].ToString();
+
+                        lstQuestionType.Add(objQuestionType);
+
+                    }
+                    //return the list with all question types
+                    return lstQuestionType;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
         public QuestionType getQuestionTypeById(int questionTypeId)
         {

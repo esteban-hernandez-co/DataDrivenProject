@@ -10,6 +10,8 @@ namespace Model
     {
         List<QuestionType> getAllQuestionType();
 
+        List<QuestionType> getAllQuestionTypeOrderByName();
+        
         QuestionType getQuestionTypeById(int questionTypeId);
 
         int insertQuestionType(string questionTypeName, string answerControl);

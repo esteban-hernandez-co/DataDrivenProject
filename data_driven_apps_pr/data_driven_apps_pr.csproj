@@ -70,11 +70,14 @@
     <Content Include="css\app.css" />
     <Content Include="default.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="js\app.js" />
+    <Content Include="js\jquery.js" />
     <Content Include="Login.aspx" />
     <Content Include="Question.aspx" />
     <Content Include="Question2.aspx" />
+    <Content Include="Respondent\RegisterPage.aspx" />
     <Content Include="StaffSearch.aspx" />
-    <Content Include="Survey.aspx" />
+    <Content Include="Respondent\Survey.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +119,13 @@
     <Compile Include="Question2.aspx.designer.cs">
       <DependentUpon>Question2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Respondent\RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Respondent\RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StaffSearch.aspx.cs">
       <DependentUpon>StaffSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,11 +133,11 @@
     <Compile Include="StaffSearch.aspx.designer.cs">
       <DependentUpon>StaffSearch.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Survey.aspx.cs">
+    <Compile Include="Respondent\Survey.aspx.cs">
       <DependentUpon>Survey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Survey.aspx.designer.cs">
+    <Compile Include="Respondent\Survey.aspx.designer.cs">
       <DependentUpon>Survey.aspx</DependentUpon>
     </Compile>
     <Compile Include="Webiste.Master.cs">

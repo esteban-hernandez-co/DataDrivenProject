@@ -60,6 +60,28 @@ namespace Model
             }
         }
 
+        public List<QuestionType> getAllQuestionTypeOrderByName()
+        {
+            try
+            {
+                IQuestionTypeDAO objQuestionTypeDAOImpl = new QuestionTypeDAOImpl();
+                List<QuestionType> objListQuestionTypes = objQuestionTypeDAOImpl.getAllQuestionTypeOrderByName();
+
+                if (objListQuestionTypes == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objListQuestionTypes;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public int insertQuestionType(string name, string answerControl)
         {
             try
@@ -83,6 +105,28 @@ namespace Model
                 int rowCount = objQuestionTypeDAOImpl.updateQuestionType(questionTypeId, questionType);
 
                 return rowCount;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public QuestionType getQuestionTypeById(int questionTypeId)
+        {
+            try
+            {
+                IQuestionTypeDAO objQuestionTypeDAOImpl = new QuestionTypeDAOImpl();
+                QuestionType objQuestionType = objQuestionTypeDAOImpl.getQuestionTypeById(questionTypeId);
+
+                if (objQuestionType == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objQuestionType;
+                }
             }
             catch (Exception ex)
             {

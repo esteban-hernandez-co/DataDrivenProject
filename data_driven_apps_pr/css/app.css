@@ -30,3 +30,7 @@
     color: #7c7b7b;
     text-align: center;
 }
+
+.cardQuestion{
+    min-height: 20rem;
+}

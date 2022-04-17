@@ -23,6 +23,11 @@ namespace Controller
         DateTime created_at;
         int created_by;
 
+        public override string ToString()
+        {
+            return "questionId:" + this.questionId + " Question: " + question_text;
+        }
+
         public QuestionDTO() { }
         public QuestionDTO(int questionId, string name, int question_parent, string description, string question_text, int question_type_id, string answer_control, string format, int is_multiple, int max_answers, int question_order, int question_sub_order, DateTime created_at, int created_by)
         {

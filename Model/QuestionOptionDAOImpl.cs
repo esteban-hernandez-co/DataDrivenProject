@@ -90,9 +90,9 @@ namespace Model
                         //go_to_question can be null
                         if (row["go_to_question"].ToString() != null)
                         {
-                            if (row["question_parent_id"].ToString().Length > 0)
+                            if (row["go_to_question"].ToString().Length > 0)
                             {
-                                objQuestionOption.GoToQuestionId = Convert.ToInt32(row["question_parent_id"].ToString());
+                                objQuestionOption.GoToQuestionId = Convert.ToInt32(row["go_to_question"].ToString());
                             }
                             else
                             {
@@ -145,9 +145,9 @@ namespace Model
                     //go_to_question can be null
                     if (selectedQuestionOption["go_to_question"].ToString() != null)
                     {
-                        if (selectedQuestionOption["question_parent_id"].ToString().Length > 0)
+                        if (selectedQuestionOption["go_to_question"].ToString().Length > 0)
                         {
-                            objQuestionOption.GoToQuestionId = Convert.ToInt32(selectedQuestionOption["question_parent_id"].ToString());
+                            objQuestionOption.GoToQuestionId = Convert.ToInt32(selectedQuestionOption["go_to_question"].ToString());
                         }
                         else
                         {
@@ -201,9 +201,9 @@ namespace Model
                         //go_to_question can be null
                         if (row["go_to_question"].ToString() != null)
                         {
-                            if (row["question_parent_id"].ToString().Length > 0)
+                            if (row["go_to_question"].ToString().Length > 0)
                             {
-                                objQuestionOption.GoToQuestionId = Convert.ToInt32(row["question_parent_id"].ToString());
+                                objQuestionOption.GoToQuestionId = Convert.ToInt32(row["go_to_question"].ToString());
                             }
                             else
                             {

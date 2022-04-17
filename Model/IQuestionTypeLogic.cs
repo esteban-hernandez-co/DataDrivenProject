@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    interface IQuestionTypeLogic
+    public interface IQuestionTypeLogic
     {
         int deleteQuestionTypeByQuestionTypeId(int questionTypeId);
 
@@ -17,5 +17,9 @@ namespace Model
         int updateQuestionType(int questionTypeId, QuestionType questionType);
 
         List<QuestionType> getAllQuestionTypes();
+
+        List<QuestionType> getAllQuestionTypeOrderByName();
+
+        QuestionType getQuestionTypeById(int questionTypeId);
     }
 }

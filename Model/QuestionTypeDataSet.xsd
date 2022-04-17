@@ -56,7 +56,7 @@ SELECT id, name, answer_control FROM question_type WHERE (id = @id)</CommandText
               <Mapping SourceColumn="answer_control" DataSetColumn="answer_control" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuestiontypeById" Modifier="Public" Name="DeleteQuestiontypeById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeleteQuestiontypeById">
+              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuestiontypeById" Modifier="Public" Name="DeleteQuestiontypeById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuestiontypeById">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[question_type] WHERE ([id] = @Original_id) </CommandText>
@@ -74,6 +74,16 @@ SELECT id, name, answer_control FROM question_type WHERE (id = @id)</CommandText
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="db_9ab8b7_122dda8775.dbo.question_type" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetAllQuestionTypeOrderByName" GetMethodModifier="Public" GetMethodName="GetAllQuestionTypeOrderByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAllQuestionTypeOrderByName" UserSourceName="GetAllQuestionTypeOrderByName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, name, answer_control
+FROM            question_type
+ORDER BY name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="db_9ab8b7_122dda8775.dbo.question_type" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetQuestionTypeById" GetMethodModifier="Public" GetMethodName="GetQuestionTypeById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetQuestionTypeById" UserSourceName="GetQuestionTypeById">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -86,7 +96,7 @@ WHERE        (id = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuestionType" Modifier="Public" Name="InsertQuestionType" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQuestionType">
+              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuestionType" Modifier="Public" Name="InsertQuestionType" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuestionType">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[question_type] ([name], [answer_control]) VALUES (@name, @answer_control);
@@ -98,7 +108,7 @@ SELECT id, name, answer_control FROM question_type WHERE (id = SCOPE_IDENTITY())
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuestionTypeById" Modifier="Public" Name="UpdateQuestionTypeById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQuestionTypeById">
+              <DbSource ConnectionRef="db_9ab8b7_122dda8775ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuestionTypeById" Modifier="Public" Name="UpdateQuestionTypeById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuestionTypeById">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[question_type] SET [name] = @name, [answer_control] = @answer_control WHERE ([id] = @Original_id) ;
@@ -122,7 +132,7 @@ SELECT id, name, answer_control FROM question_type WHERE (id = @id)</CommandText
   <xs:element name="QuestionTypeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="QuestionTypeDataSet" msprop:Generator_UserDSName="QuestionTypeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="question_type" msprop:Generator_TableClassName="question_typeDataTable" msprop:Generator_TableVarName="tablequestion_type" msprop:Generator_TablePropName="question_type" msprop:Generator_RowDeletingName="question_typeRowDeleting" msprop:Generator_RowChangingName="question_typeRowChanging" msprop:Generator_RowEvHandlerName="question_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="question_typeRowDeleted" msprop:Generator_UserTableName="question_type" msprop:Generator_RowChangedName="question_typeRowChanged" msprop:Generator_RowEvArgName="question_typeRowChangeEvent" msprop:Generator_RowClassName="question_typeRow">
+        <xs:element name="question_type" msprop:Generator_TableClassName="question_typeDataTable" msprop:Generator_TableVarName="tablequestion_type" msprop:Generator_RowChangedName="question_typeRowChanged" msprop:Generator_TablePropName="question_type" msprop:Generator_RowDeletingName="question_typeRowDeleting" msprop:Generator_RowChangingName="question_typeRowChanging" msprop:Generator_RowEvHandlerName="question_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="question_typeRowDeleted" msprop:Generator_RowClassName="question_typeRow" msprop:Generator_UserTableName="question_type" msprop:Generator_RowEvArgName="question_typeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

@@ -15,24 +15,6 @@ namespace data_driven_apps_pr
     {
 
         /// <summary>
-        /// lblIPAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIPAddress;
-
-        /// <summary>
-        /// lblIPAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIPAdd;
-
-        /// <summary>
         /// lblIPAd control.
         /// </summary>
         /// <remarks>
@@ -87,13 +69,31 @@ namespace data_driven_apps_pr
         protected global::System.Web.UI.WebControls.Label lblQuestionTitle;
 
         /// <summary>
-        /// placeHolderQuestionOptions control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder placeHolderQuestionOptions;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// panelQuestionOptions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelQuestionOptions;
+
+        /// <summary>
+        /// lblNextQuestion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNextQuestion;
 
         /// <summary>
         /// btnNext control.

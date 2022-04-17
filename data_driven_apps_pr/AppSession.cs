@@ -35,5 +35,18 @@ namespace data_driven_apps_pr
         {
             HttpContext.Current.Session["QuestionNode"] = _questionNode;
         }
+        public static List<ResSessionAnswerDTO> getListAnswers()
+        {
+            if (HttpContext.Current.Session["ListAnswers"] == null)
+            {
+                HttpContext.Current.Session["ListAnswers"] = new List<ResSessionAnswerDTO>();
+            }
+            return (List<ResSessionAnswerDTO>)HttpContext.Current.Session["ListAnswers"];
+        }
+
+        public static void setListAnswers(List<ResSessionAnswerDTO> _listAnswers)
+        {
+            HttpContext.Current.Session["ListAnswers"] = _listAnswers;
+        }
     }
 }
