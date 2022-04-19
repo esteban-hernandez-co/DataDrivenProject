@@ -166,6 +166,110 @@ namespace Model
             }
         }
 
+        public QuestionOption getQuestionOptionByName(string questionOptionName)
+        {
+            try
+            {
+                //get the Data set
+                question_optionTableAdapter objQuestionOptionTableAdapter = new question_optionTableAdapter();
+                //call the query all Question Option
+                QuestionOptionDataSet.question_optionDataTable objQuestionOptionDataTable = objQuestionOptionTableAdapter.GetQuestionOptionByName(questionOptionName);
+
+                int dataCount = objQuestionOptionDataTable.Count;
+                //If no data has been found
+                if (dataCount == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    //if data is found
+
+                    QuestionOption objQuestionOption = new QuestionOption();
+                    DataRow selectedQuestionOption = objQuestionOptionDataTable.Rows[0];
+                    objQuestionOption.QuestionOptionId = Convert.ToInt32(selectedQuestionOption["id"].ToString());
+                    objQuestionOption.OptionValue = selectedQuestionOption["option_value"].ToString();
+                    objQuestionOption.Name = selectedQuestionOption["name"].ToString();
+                    objQuestionOption.QuestionId = Convert.ToInt32(selectedQuestionOption["question_id"].ToString());
+                    objQuestionOption.OptionOrder = Convert.ToInt32(selectedQuestionOption["option_order"].ToString());
+                    objQuestionOption.CreatedBy = Convert.ToInt32(selectedQuestionOption["created_by"].ToString());
+                    objQuestionOption.Created_at = Convert.ToDateTime(selectedQuestionOption["created_at"].ToString());
+                    //go_to_question can be null
+                    if (selectedQuestionOption["go_to_question"].ToString() != null)
+                    {
+                        if (selectedQuestionOption["go_to_question"].ToString().Length > 0)
+                        {
+                            objQuestionOption.GoToQuestionId = Convert.ToInt32(selectedQuestionOption["go_to_question"].ToString());
+                        }
+                        else
+                        {
+                            objQuestionOption.GoToQuestionId = -1;
+                        }
+
+                    }
+
+                    //return the question type
+                    return objQuestionOption;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public QuestionOption getQuestionOptionByOptionValue(string questionOptionValue)
+        {
+            try
+            {
+                //get the Data set
+                question_optionTableAdapter objQuestionOptionTableAdapter = new question_optionTableAdapter();
+                //call the query all Question Option
+                QuestionOptionDataSet.question_optionDataTable objQuestionOptionDataTable = objQuestionOptionTableAdapter.GetQuestionOptionByOptionValue(questionOptionValue);
+
+                int dataCount = objQuestionOptionDataTable.Count;
+                //If no data has been found
+                if (dataCount == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    //if data is found
+
+                    QuestionOption objQuestionOption = new QuestionOption();
+                    DataRow selectedQuestionOption = objQuestionOptionDataTable.Rows[0];
+                    objQuestionOption.QuestionOptionId = Convert.ToInt32(selectedQuestionOption["id"].ToString());
+                    objQuestionOption.OptionValue = selectedQuestionOption["option_value"].ToString();
+                    objQuestionOption.Name = selectedQuestionOption["name"].ToString();
+                    objQuestionOption.QuestionId = Convert.ToInt32(selectedQuestionOption["question_id"].ToString());
+                    objQuestionOption.OptionOrder = Convert.ToInt32(selectedQuestionOption["option_order"].ToString());
+                    objQuestionOption.CreatedBy = Convert.ToInt32(selectedQuestionOption["created_by"].ToString());
+                    objQuestionOption.Created_at = Convert.ToDateTime(selectedQuestionOption["created_at"].ToString());
+                    //go_to_question can be null
+                    if (selectedQuestionOption["go_to_question"].ToString() != null)
+                    {
+                        if (selectedQuestionOption["go_to_question"].ToString().Length > 0)
+                        {
+                            objQuestionOption.GoToQuestionId = Convert.ToInt32(selectedQuestionOption["go_to_question"].ToString());
+                        }
+                        else
+                        {
+                            objQuestionOption.GoToQuestionId = -1;
+                        }
+
+                    }
+
+                    //return the question type
+                    return objQuestionOption;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public List<QuestionOption> getQuestionOptionByQuestionID(int questionId)
         {
             try

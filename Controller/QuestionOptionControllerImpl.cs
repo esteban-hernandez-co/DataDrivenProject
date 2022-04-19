@@ -137,6 +137,72 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
+        public QuestionOptionDTO getQuestionOptionByName(string questionOptionName)
+        {
+            try
+            {
+                IQuestionOptionLogic objQuestionOptionLogicImp = new QuestionOptionLogicImpl();
+                QuestionOption objQuestionOption = objQuestionOptionLogicImp.getQuestionOptionByName(questionOptionName);
+                if (objQuestionOption == null)
+                {
+                    return null;
+                }
+                else
+                {
+
+                    QuestionOptionDTO objQuestionOptionDTO = new QuestionOptionDTO();
+
+                    objQuestionOptionDTO.QuestionOptionId = objQuestionOption.QuestionOptionId;
+                    objQuestionOptionDTO.OptionValue = objQuestionOption.OptionValue;
+                    objQuestionOptionDTO.Name = objQuestionOption.Name;
+                    objQuestionOptionDTO.QuestionId = objQuestionOption.QuestionId;
+                    objQuestionOptionDTO.OptionOrder = objQuestionOption.OptionOrder;
+                    objQuestionOptionDTO.CreatedBy = objQuestionOption.CreatedBy;
+                    objQuestionOptionDTO.Created_at = objQuestionOption.Created_at;
+                    objQuestionOptionDTO.GoToQuestionId = objQuestionOption.GoToQuestionId;
+
+                    return objQuestionOptionDTO;
+                }
+
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+        }
+        public QuestionOptionDTO getQuestionOptionByOptionValue(string questionOptionValue)
+        {
+            try
+            {
+                IQuestionOptionLogic objQuestionOptionLogicImp = new QuestionOptionLogicImpl();
+                QuestionOption objQuestionOption = objQuestionOptionLogicImp.getQuestionOptionByOptionValue(questionOptionValue);
+                if (objQuestionOption == null)
+                {
+                    return null;
+                }
+                else
+                {
+
+                    QuestionOptionDTO objQuestionOptionDTO = new QuestionOptionDTO();
+
+                    objQuestionOptionDTO.QuestionOptionId = objQuestionOption.QuestionOptionId;
+                    objQuestionOptionDTO.OptionValue = objQuestionOption.OptionValue;
+                    objQuestionOptionDTO.Name = objQuestionOption.Name;
+                    objQuestionOptionDTO.QuestionId = objQuestionOption.QuestionId;
+                    objQuestionOptionDTO.OptionOrder = objQuestionOption.OptionOrder;
+                    objQuestionOptionDTO.CreatedBy = objQuestionOption.CreatedBy;
+                    objQuestionOptionDTO.Created_at = objQuestionOption.Created_at;
+                    objQuestionOptionDTO.GoToQuestionId = objQuestionOption.GoToQuestionId;
+
+                    return objQuestionOptionDTO;
+                }
+
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+        }
 
         public QuestionOptionDTO insertQuestionOption(QuestionOptionDTO questionOption)
         {

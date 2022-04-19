@@ -15,6 +15,10 @@ namespace Controller
 
         QuestionOptionDTO getQuestionOptionById(int questionOptionId);
 
+        QuestionOptionDTO getQuestionOptionByName(string questionOptionName);
+
+        QuestionOptionDTO getQuestionOptionByOptionValue(string questionOptionValue);
+
         QuestionOptionDTO insertQuestionOption(QuestionOptionDTO questionOption);
 
         QuestionOptionDTO deleteQuestionOptionByQuestionOptionId(int questionOptionId);

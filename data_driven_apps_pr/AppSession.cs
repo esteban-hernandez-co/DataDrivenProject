@@ -48,5 +48,18 @@ namespace data_driven_apps_pr
         {
             HttpContext.Current.Session["ListAnswers"] = _listAnswers;
         }
+        public static QuestionnaireLinkedList getQuestionnaire()
+        {
+            if (HttpContext.Current.Session["Questionnaire"] == null)
+            {
+                HttpContext.Current.Session["Questionnaire"] = new QuestionnaireLinkedList();
+            }
+            return (QuestionnaireLinkedList)HttpContext.Current.Session["Questionnaire"];
+        }
+
+        public static void setQuestionnaire(QuestionnaireLinkedList _questionnaire)
+        {
+            HttpContext.Current.Session["Questionnaire"] = _questionnaire;
+        }
     }
 }

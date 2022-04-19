@@ -63,6 +63,9 @@
     <Compile Include="QuestionLogicImpl.cs" />
     <Compile Include="QuestionOption.cs" />
     <Compile Include="QuestionOptionDAOImpl.cs" />
+    <Compile Include="QuestionOptionDataSet.cs">
+      <DependentUpon>QuestionOptionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuestionOptionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +80,16 @@
       <DependentUpon>QuestionTypeDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="QuestionTypeLogicImpl.cs" />
+    <Compile Include="RespondentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RespondentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RespondentSessionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RespondentSessionDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -116,6 +129,28 @@
     </None>
     <None Include="QuestionTypeDataSet.xss">
       <DependentUpon>QuestionTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RespondentDataSet.xsc">
+      <DependentUpon>RespondentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RespondentDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RespondentDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RespondentDataSet.xss">
+      <DependentUpon>RespondentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RespondentSessionDataSet.xsc">
+      <DependentUpon>RespondentSessionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RespondentSessionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RespondentSessionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RespondentSessionDataSet.xss">
+      <DependentUpon>RespondentSessionDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

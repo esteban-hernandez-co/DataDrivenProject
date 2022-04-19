@@ -24,5 +24,9 @@ namespace Model
 
         QuestionOption getQuestionOptionById(int questionOptionId);
 
+        QuestionOption getQuestionOptionByName(string questionOptionName);
+
+        QuestionOption getQuestionOptionByOptionValue(string questionOptionValue);
+
     }
 }

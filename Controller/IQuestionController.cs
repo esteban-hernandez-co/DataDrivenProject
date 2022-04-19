@@ -10,7 +10,9 @@ namespace Controller
     {
         List<QuestionDTO> getAllQuestionsByOrder();
 
-        Node getQuestionnaire();
+        QuestionnaireLinkedList getQuestionnaire();
+
+        Node getFirstQuestionFromQuestionnaire();
 
         QuestionDTO getQuestionByQuestionId(int questionId);
 

@@ -12,8 +12,8 @@ namespace data_driven_apps_pr
         protected void Page_Load(object sender, EventArgs e)
         {
             //Show current year
-            
-            lblYear.Text = DateTime.Now.Year.ToString();
+            string year = DateTime.Now.Year.ToString();
+            lblYear.Text = year;
         }
         public void setTitle(string title)
         {

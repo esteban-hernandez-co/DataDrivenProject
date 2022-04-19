@@ -17,7 +17,48 @@ namespace Model
         {
             throw new NotImplementedException();
         }
+        public Question getQuestionById(int questionId)
+        {
+            try
+            {
+                IQuestionDAO objQuestionDAOImpl = new QuestionDAOImpl();
+                Question objQuestion = objQuestionDAOImpl.getQuestionByQuestionID(questionId);
 
+                if (objQuestion == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objQuestion;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public List<Question> getQuestionnaire()
+        {
+            try
+            {
+                IQuestionDAO objQuestionDAOImpl = new QuestionDAOImpl();
+                List<Question> objListQuestions = objQuestionDAOImpl.getQuestionnaire();
+
+                if (objListQuestions == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objListQuestions;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public List<Question> getAllQuestionsByOrder()
         {
             try

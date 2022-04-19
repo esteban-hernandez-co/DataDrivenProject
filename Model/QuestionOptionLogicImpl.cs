@@ -118,6 +118,48 @@ namespace Model
                 throw new Exception(ex.Message);
             }
         }
+        public QuestionOption getQuestionOptionByName(string questionOptionName)
+        {
+            try
+            {
+                IQuestionOptionDAO objQuestionOptionDAOImpl = new QuestionOptionDAOImpl();
+                QuestionOption objQuestionOption = objQuestionOptionDAOImpl.getQuestionOptionByName(questionOptionName);
+
+                if (objQuestionOption == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objQuestionOption;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public QuestionOption getQuestionOptionByOptionValue(string questionOptionValue)
+        {
+            try
+            {
+                IQuestionOptionDAO objQuestionOptionDAOImpl = new QuestionOptionDAOImpl();
+                QuestionOption objQuestionOption = objQuestionOptionDAOImpl.getQuestionOptionByOptionValue(questionOptionValue);
+
+                if (objQuestionOption == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objQuestionOption;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
         public int insertQuestionOption(string optionValue, int? goToQuestion, int questionId, string name, int optionOrder, int createdBy)
         {

@@ -9,6 +9,9 @@ namespace Model
     public interface IQuestionDAO
     {
         List<Question> getAllQuestionsByOrder();
+
+        List<Question> getQuestionnaire();
+
         Question getQuestionByQuestionID(int questionId);
 
         int insertQuestion(string authorName);

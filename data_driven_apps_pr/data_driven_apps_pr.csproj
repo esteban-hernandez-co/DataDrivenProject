@@ -76,6 +76,7 @@
     <Content Include="Question.aspx" />
     <Content Include="Question2.aspx" />
     <Content Include="Respondent\RegisterPage.aspx" />
+    <Content Include="Respondent\SurveySummary.aspx" />
     <Content Include="StaffSearch.aspx" />
     <Content Include="Respondent\Survey.aspx" />
     <Content Include="Web.config" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="Respondent\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Respondent\SurveySummary.aspx.cs">
+      <DependentUpon>SurveySummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Respondent\SurveySummary.aspx.designer.cs">
+      <DependentUpon>SurveySummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffSearch.aspx.cs">
       <DependentUpon>StaffSearch.aspx</DependentUpon>

@@ -17,5 +17,9 @@ namespace Model
         int updateQuestion(int questionId, Question question);
 
         List<Question> getAllQuestionsByOrder();
+
+        List<Question> getQuestionnaire();
+
+        Question getQuestionById(int questionId);
     }
 }
