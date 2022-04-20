@@ -10,7 +10,6 @@ namespace data_driven_apps_pr
 {
     public partial class Survey : System.Web.UI.Page
     {
-        private int questionOption = 0;
         private TextBox textBox = new TextBox();
         private DropDownList dropDownList = new DropDownList();
         private CheckBoxList checkBoxList = new CheckBoxList();
@@ -44,6 +43,7 @@ namespace data_driven_apps_pr
                     ipFinal = ipValue;
                 }
             }
+            AppSession.setCurrentIp(ipFinal);
             
 
             if (IsPostBack)
@@ -85,7 +85,7 @@ namespace data_driven_apps_pr
                                         QuestionDTO newQuestionDTO = questionController.getQuestionByQuestionId(questionOptionDTO.GoToQuestionId);
 
                                         //Add New question
-                                        //last question
+                                        //is this the last question?
                                         if(questionnaireNode == null)
                                         {
                                             questionnaire.InsertLast(questionnaire, currentQuestionNumber + 1, newQuestionDTO);
@@ -136,10 +136,16 @@ namespace data_driven_apps_pr
                     //set up question and answers
                     ShowQuestionAndOptions(questionnaireNode.CurrentQuestion);
                     
+                    //show Next Question
                     if(questionnaireNode.Next != null)
                     {
                         lblNextQuestion.Text = questionnaireNode.Next.CurrentQuestion.ToString();
                     }
+                    else
+                    {
+                        lblNextQuestion.Text = string.Empty;
+                    }
+                    //set Next Question in Session
                     AppSession.setCurrentNode(questionnaireNode.Next);
                     AppSession.setCurrentQuestionNumber(currentQuestionNumber + 1);
                 }
@@ -154,13 +160,12 @@ namespace data_driven_apps_pr
 
                 //get All questions in order
                 IQuestionController objQuestionController = new QuestionControllerImpl();
-
-                //List<QuestionDTO> questionnaire = objQuestionController.getAllQuestionsByOrder();
                 QuestionnaireLinkedList questionnaire = objQuestionController.getQuestionnaire();
+                
                 //Keep questionnaire in Session
                 AppSession.setQuestionnaire(questionnaire);
 
-                //Node questionnaireNode = objQuestionController.getFirstQuestionFromQuestionnaire();
+                //First Question
                 Node questionnaireNode = questionnaire.Head;
 
                 //No questions Found
@@ -171,8 +176,6 @@ namespace data_driven_apps_pr
                 }
                 else
                 {
-                    //lblQuestion.Text = questionnaireNode.CurrentQuestion.Name;
-                    //lblQuestionTitle.Text = questionnaireNode.CurrentQuestion.QuestionText;
                     //set up question and answers
                     ShowQuestionAndOptions(questionnaireNode.CurrentQuestion);
                                         

@@ -8,6 +8,15 @@ namespace data_driven_apps_pr
 {
     public class AppSession
     {
+        public static string getCurrentIp()
+        {
+            return (string)HttpContext.Current.Session["currentIp"];
+        }
+
+        public static void setCurrentIp(string _ip)
+        {
+            HttpContext.Current.Session["currentIp"] = _ip;
+        }
         public static int getCurrentQuestionNumber()
         {
             if (HttpContext.Current.Session["CurrentQuestionNumber"] == null)

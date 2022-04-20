@@ -57,21 +57,51 @@ namespace data_driven_apps_pr.Respondent
 
         }
 
-        protected void anonymous_yes_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void ButtonNext_Click(object sender, EventArgs e)
         {
-            // The respondent want to stay anonymous
+            string ip = AppSession.getCurrentIp();
+            // The respondent wants to stay anonymous
             if (anonymous_yes.Checked)
             {
+                List<ResSessionAnswerDTO> listAnswers = AppSession.getListAnswers();
 
+                //if there are answers
+                if (listAnswers.Count > 1)
+                {
+                    //create anonymous respondent
+                    IRespondentController respondentController = new RespondentControllerImpl();
+                    RespondentDTO respondentDTO = respondentController.InsertRespondent("Anonymous", "Anonymous", new DateTime(), "");
+
+                    //if respondent is saved
+                    if (respondentDTO.RespondentId > 0)
+                    {
+                        IRespondentSessionController respondentSessionController = new RespondentSessionControllerImpl();
+                        RespondentSessionDTO respondentSessionDTO = respondentSessionController.InsertRespondentSession(respondentDTO.RespondentId, ip);
+
+                        //if session is saved
+                        if (respondentSessionDTO.Id > 0)
+                        {
+                            //go answer by answer and insert it into DB
+                            foreach (ResSessionAnswerDTO answerDTO in listAnswers)
+                            {
+                                IResSessionAnswerController resSessionAnswerController = new ResSessionAnswerControllerImpl();
+                                ResSessionAnswerDTO resSessionAnswerDTO = resSessionAnswerController.InsertResSessionAnswer(answerDTO.Answer, answerDTO.QuestionId, respondentSessionDTO.Id);
+                            }
+
+                            //Redirect to End Survey - Thank you
+                            Response.Redirect("/Respondent/ThankYou.aspx");
+                        }
+                    }
+                    
+                }
+
+                
             }
             else
             {
-
+                //Register page
+                Response.Redirect("/Respondent/RegisterPage.aspx");
             }
         }
     }
