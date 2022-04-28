@@ -3,4 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Thank you</h1>
+    <br />
+    <div>
+        <asp:Button class="btn btn-lg btn-secondary" ID="ButtonSendMeHome" runat="server" Text="Home" OnClick="ButtonSendMeHome_Click" />
+    </div>
 </asp:Content>

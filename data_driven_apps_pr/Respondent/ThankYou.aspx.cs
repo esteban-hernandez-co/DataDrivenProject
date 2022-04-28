@@ -13,5 +13,11 @@ namespace data_driven_apps_pr.Respondent
         {
 
         }
+
+        protected void ButtonSendMeHome_Click(object sender, EventArgs e)
+        {
+            //Index page
+            Response.Redirect("/Index.aspx");
+        }
     }
 }

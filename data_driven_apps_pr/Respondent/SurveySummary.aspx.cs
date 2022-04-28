@@ -16,11 +16,16 @@ namespace data_driven_apps_pr.Respondent
             //this.Master.setTitle("Survey Summary");
             List<ResSessionAnswerDTO> listAnswers = AppSession.getListAnswers();
 
-            if(listAnswers.Count < 1)
+            //Send one message or another depending whether answers are found
+            PlaceHolderNoAnswers.Visible = (listAnswers.Count < 1);
+            PlaceHolderAnonymous.Visible = (listAnswers.Count > 0);
+
+            if (listAnswers.Count < 1)
             {
                 Label label = new Label();
-                label.Text = "Sorry, No answers found!";
+                label.Text = "<p>Sorry, No answers found!</p>";
                 infoAnswers.Controls.Add(label);
+                
             }
             string questionText = string.Empty;
             int questionsCount = 0;
@@ -57,7 +62,11 @@ namespace data_driven_apps_pr.Respondent
 
         }
 
-
+        protected void ButtonSendMeSurvey_Click(object sender, EventArgs e)
+        {
+            //Index page
+            Response.Redirect("/Index.aspx");
+        }
         protected void ButtonNext_Click(object sender, EventArgs e)
         {
             string ip = AppSession.getCurrentIp();
@@ -93,8 +102,9 @@ namespace data_driven_apps_pr.Respondent
                             Response.Redirect("/Respondent/ThankYou.aspx");
                         }
                     }
-                    
+
                 }
+                
 
                 
             }

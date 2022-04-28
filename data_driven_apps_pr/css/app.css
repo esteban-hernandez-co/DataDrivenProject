@@ -13,6 +13,14 @@
     margin-bottom: 40px;
 }
 
+.titleStartSurvey {
+    font-size: 1.5rem;
+}
+
+.loginLink{
+    text-align: right;
+}
+
 .questionTitle {
     font-size: 24px;
     margin-bottom: 20px;

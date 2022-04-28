@@ -5,23 +5,34 @@
     <div>
         <asp:Label runat="server" ID="lblSurverySummaryTitle" class="surveySummaryTitle" Text="Survey Summary"></asp:Label>
         <asp:PlaceHolder ID="infoAnswers" runat="server"></asp:PlaceHolder>
+        <asp:PlaceHolder ID="PlaceHolderNoAnswers" runat="server">
+            <p><b>
+                You can participate in our survey by clicking the next Button.
 
-        <p><b>
-            You can participate in this survey anonymously or register your personal information.
-
-           </b>
-        </p> 
-        <div class="anonymous">
-            <div class="anonymous__title">
-                Taking the survey anonymously?
+               </b>
+            </p>
+            <div>
+                <asp:Button class="btn btn-lg btn-secondary" ID="ButtonSendMeSurvey" runat="server" Text="Home" OnClick="ButtonSendMeSurvey_Click" />
             </div>
-        </div>
-        <div >
-            <asp:RadioButton ID="anonymous_yes" runat="server" Text="Yes" GroupName="anonymous" Checked="true" />
-            <asp:RadioButton ID="anonymous_no" runat="server" Text="No" GroupName="anonymous"/>        
-        </div>
-        <div>
-            <asp:Button class="btn btn-lg btn-secondary" ID="ButtonNext" runat="server" Text="Next" OnClick="ButtonNext_Click" />
-        </div>
+        </asp:PlaceHolder>
+        <asp:PlaceHolder ID="PlaceHolderAnonymous" runat="server">
+            <p><b>
+                You can participate in this survey anonymously or register your personal information.
+
+               </b>
+            </p> 
+            <div class="anonymous">
+                <div class="anonymous__title">
+                    Taking the survey anonymously?
+                </div>
+            </div>
+            <div >
+                <asp:RadioButton ID="anonymous_yes" runat="server" Text="Yes" GroupName="anonymous" Checked="true" />
+                <asp:RadioButton ID="anonymous_no" runat="server" Text="No" GroupName="anonymous"/>        
+            </div>
+            <div>
+                <asp:Button class="btn btn-lg btn-secondary" ID="ButtonNext" runat="server" Text="Next" OnClick="ButtonNext_Click" />
+            </div>
+        </asp:PlaceHolder>
     </div>
 </asp:Content>

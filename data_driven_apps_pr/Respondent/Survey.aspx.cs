@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 using Controller;
 
 namespace data_driven_apps_pr
@@ -32,6 +33,17 @@ namespace data_driven_apps_pr
             String ipAddress = GetIpAddress();
             String ipValue = GetIpValue();
             String ipFinal = String.Empty;
+            String hostName = Dns.GetHostName();
+
+            IPHostEntry ip = Dns.GetHostEntry(hostName);
+            if(ip != null)
+            {
+                //localhost?
+                if (ipValue.Equals(ip.AddressList[0].ToString()))
+                {
+
+                }
+            }
             if (ipAddress.Length > 0)
             {
                 ipFinal = ipAddress;
@@ -198,6 +210,16 @@ namespace data_driven_apps_pr
 
             lblQuestionTitle.Text = questionDTO.QuestionText;
 
+            //is question multiple selection?
+            if(questionDTO.Is_multiple < 1)
+            {
+                lblQuestionOption.Text = string.Format("Please select 1 Option");
+            }
+            else
+            {
+                lblQuestionOption.Text = string.Format("Please select up to  {0} Options", questionDTO.Max_answers);
+            }
+            
             //get type of question
             IQuestionTypeController questionTypeController = new QuestionTypeControllerImpl();
             QuestionTypeDTO questionTypeDTO = questionTypeController.getQuestionTypeById(questionDTO.Question_type_id);
@@ -213,6 +235,7 @@ namespace data_driven_apps_pr
             {
                 textBox.ID = "newControl";
                 textBox.CssClass = "form-control";
+                this.textBox.CausesValidation = false;
                 if (questionTypeDTO.Name.Equals("Email"))
                 {
                     textBox.TextMode = TextBoxMode.Email;
@@ -258,6 +281,7 @@ namespace data_driven_apps_pr
                             if (questionDTO.Is_multiple > 0)
                             {
                                 newControlLB.SelectionMode = ListSelectionMode.Multiple;
+                                
                             }
                             this.panelQuestionOptions.Controls.Add(newControlLB);
                             RequiredFieldValidator1.ControlToValidate = newControlLB.ID;

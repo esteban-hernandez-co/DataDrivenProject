@@ -69,6 +69,15 @@ namespace data_driven_apps_pr
         protected global::System.Web.UI.WebControls.Label lblQuestionTitle;
 
         /// <summary>
+        /// lblQuestionOption control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQuestionOption;
+
+        /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>

@@ -15,7 +15,11 @@
                 <asp:PlaceHolder ID="placeHolderErrors" runat="server"></asp:PlaceHolder>
                 
 
-                <h4 class="card-title mb-5"><asp:Label ID="lblQuestionTitle" runat="server" Text="Question"></asp:Label></h4>
+                <div class="card-title mb-5">
+                    <h4><asp:Label ID="lblQuestionTitle" runat="server" Text="Question"></asp:Label></h4>
+                    <h6><asp:Label ID="lblQuestionOption" runat="server" Text="Question Option"></asp:Label></h6>
+                </div>
+                
                 <p class="card-text">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="This Field is required"></asp:RequiredFieldValidator>
                 

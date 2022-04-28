@@ -33,6 +33,33 @@ namespace data_driven_apps_pr.Respondent
         protected global::System.Web.UI.WebControls.PlaceHolder infoAnswers;
 
         /// <summary>
+        /// PlaceHolderNoAnswers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolderNoAnswers;
+
+        /// <summary>
+        /// ButtonSendMeSurvey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSendMeSurvey;
+
+        /// <summary>
+        /// PlaceHolderAnonymous control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolderAnonymous;
+
+        /// <summary>
         /// anonymous_yes control.
         /// </summary>
         /// <remarks>
