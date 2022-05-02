@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="mb-5 loginLink">
-        <asp:LinkButton runat="server" Text="Log in" OnClick="Unnamed1_Click"></asp:LinkButton>
+        <asp:LinkButton runat="server" Text="Log in" ID="loginLink" OnClick="loginLink_Click"></asp:LinkButton>
     </div>
     <div>
         <div class="row mb-5">

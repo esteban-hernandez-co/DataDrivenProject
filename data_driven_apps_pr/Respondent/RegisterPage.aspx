@@ -25,6 +25,11 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone Number is required" ForeColor="#CC3300"></asp:RequiredFieldValidator>
         </div>
         <div class="mb-3 text-start">
+          <asp:Label ID="Label1" class="form-label" runat="server" Text="Email"></asp:Label>
+          <asp:TextBox ID="txtEmail" class="form-control" runat="server" TextMode="Email"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+        </div>
+        <div class="mb-3 text-start">
           <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Register" OnClick="BtnRegister_Click" />&nbsp; 
           <asp:Button ID="btnCancel" class="btn btn-secondary" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
         </div>

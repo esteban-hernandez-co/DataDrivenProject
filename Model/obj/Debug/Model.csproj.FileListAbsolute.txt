@@ -1,7 +1,7 @@
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\obj\Debug\Model.csprojAssemblyReference.cache
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\bin\Debug\Model.dll.config
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\bin\Debug\Model.dll
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\bin\Debug\Model.pdb
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\obj\Debug\Model.dll
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\Model\obj\Debug\Model.pdb

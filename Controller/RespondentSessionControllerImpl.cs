@@ -9,16 +9,28 @@ namespace Controller
 {
     public class RespondentSessionControllerImpl : IRespondentSessionController
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentSessionId"></param>
+        /// <returns></returns>
         public RespondentSessionDTO DeleteRespondentSessionById(int respondentSessionId)
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<RespondentSessionDTO> GetAllRespondentSessions()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public List<RespondentSessionDTO> GetRespondentSessionsByDate(DateTime date)
         {
             throw new NotImplementedException();
@@ -28,6 +40,11 @@ namespace Controller
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentSessionId"></param>
+        /// <returns></returns>
         public RespondentSessionDTO GetRespondentSessionById(int respondentSessionId)
         {
             try
@@ -57,7 +74,12 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentId"></param>
+        /// <param name="ip"></param>
+        /// <returns></returns>
         public RespondentSessionDTO InsertRespondentSession(int respondentId, string ip)
         {
             try

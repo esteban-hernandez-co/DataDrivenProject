@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,11 +10,19 @@ namespace Controller
 {
     public class RespondentControllerImpl : IRespondentController
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentId"></param>
+        /// <returns></returns>
         public RespondentDTO DeleteRespondentByRespondentId(int respondentId)
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<RespondentDTO> GetAllRespondents()
         {
             try
@@ -57,6 +66,52 @@ namespace Controller
             }
         }
 
+        public List<RespondentDTO> GetRespondentByDynamicSearch(string querySearchStr)
+        {
+            try
+            {
+                
+                IRespondentLogic objRespondentLogicImp = new RespondentLogicImpl();
+                List<Respondent> listRespondents = objRespondentLogicImp.GetRespondentByDynamicSearch(querySearchStr);
+
+                //if no objects found
+                if (listRespondents == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    //list of all objects to return
+                    List<RespondentDTO> lstRespondentsToShow = new List<RespondentDTO>();
+                    //foreach
+                    //if you don't know what a foreach is...go back to foundation programmig
+                    foreach (Respondent objRespondent in listRespondents)
+                    {
+                        RespondentDTO objRespondentDTO = new RespondentDTO();
+                        objRespondentDTO.RespondentId = objRespondent.RespondentId;
+                        objRespondentDTO.RespondentName = objRespondent.RespondentName;
+                        objRespondentDTO.RespondentLastName = objRespondent.RespondentLastName;
+                        objRespondentDTO.Dob = objRespondent.Dob;
+                        objRespondentDTO.PhoneNumber = objRespondent.PhoneNumber;
+                        objRespondentDTO.CreatedAt = objRespondent.CreatedAt;
+
+                        lstRespondentsToShow.Add(objRespondentDTO);
+                    }
+
+                    return lstRespondentsToShow;
+                }
+
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentId"></param>
+        /// <returns></returns>
         public RespondentDTO GetRespondentById(int respondentId)
         {
             try
@@ -91,7 +146,11 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentLastName"></param>
+        /// <returns></returns>
         public RespondentDTO GetRespondentByLastName(string respondentLastName)
         {
             try
@@ -126,7 +185,11 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentName"></param>
+        /// <returns></returns>
         public RespondentDTO GetRespondentByName(string respondentName)
         {
             try
@@ -161,15 +224,23 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="lastName"></param>
+        /// <param name="dob"></param>
+        /// <param name="phone"></param>
+        /// <returns></returns>
 
-        public RespondentDTO InsertRespondent(string name, string lastName, DateTime dob, string phone)
+        public RespondentDTO InsertRespondent(string name, string lastName, DateTime dob, string phone, string email)
         {
             try
             {
                 //call logic implementation
                 //Do I need to explain the MVC architecture? 
                 IRespondentLogic objRespondentLogicImp = new RespondentLogicImpl();
-                Respondent respondentStatus = objRespondentLogicImp.InsertRespondent(name, lastName, dob, phone);
+                Respondent respondentStatus = objRespondentLogicImp.InsertRespondent(name, lastName, dob, phone, email);
 
                 RespondentDTO objRespondentDTO = new RespondentDTO();
                 if (respondentStatus.RespondentId == 0)
@@ -199,6 +270,11 @@ namespace Controller
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondent"></param>
+        /// <returns></returns>
         public RespondentDTO InsertRespondent(RespondentDTO respondent)
         {
             try
@@ -207,7 +283,7 @@ namespace Controller
                 //Do I need to explain the MVC architecture? 
                 IRespondentLogic objRespondentLogicImp = new RespondentLogicImpl();
 
-                Respondent respondentStatus = objRespondentLogicImp.InsertRespondent(respondent.RespondentName, respondent.RespondentLastName, respondent.Dob, respondent.PhoneNumber);
+                Respondent respondentStatus = objRespondentLogicImp.InsertRespondent(respondent.RespondentName, respondent.RespondentLastName, respondent.Dob, respondent.PhoneNumber, respondent.Email);
 
                 RespondentDTO objRespondentDTO = new RespondentDTO();
                 if (respondentStatus.RespondentId == 0)
@@ -236,7 +312,15 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondentId"></param>
+        /// <param name="name"></param>
+        /// <param name="lastName"></param>
+        /// <param name="dob"></param>
+        /// <param name="phone"></param>
+        /// <returns></returns>
         public RespondentDTO UpdateRespondent(int respondentId, string name, string lastName, DateTime dob, string phone)
         {
             try
@@ -267,7 +351,11 @@ namespace Controller
                 throw new Exception(exception.Message);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="respondent"></param>
+        /// <returns></returns>
         public RespondentDTO UpdateRespondent(RespondentDTO respondent)
         {
             try

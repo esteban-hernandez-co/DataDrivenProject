@@ -18,5 +18,11 @@ namespace data_driven_apps_pr
         {
             Response.Redirect("/Respondent/Survey.aspx");
         }
+
+       
+        protected void loginLink_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Staff/Login.aspx");
+        }
     }
 }

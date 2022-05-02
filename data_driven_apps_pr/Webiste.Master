@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html>
-<head runat="server">
+<head runat="server" id="MasterTemplate">
     <meta HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

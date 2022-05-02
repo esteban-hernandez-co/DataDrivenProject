@@ -15,6 +15,15 @@ namespace data_driven_apps_pr
     {
 
         /// <summary>
+        /// loginLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton loginLink;
+
+        /// <summary>
         /// btnStartSurvey control.
         /// </summary>
         /// <remarks>

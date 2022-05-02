@@ -44,6 +44,29 @@ namespace Model
             }
         }
 
+        public List<Respondent> GetRespondentByDynamicSearch(string querySearchStr)
+        {
+            try
+            {
+                IRespondentDAO objRespondentDAOImpl = new RespondentDAOImpl();
+                List<Respondent> objListRespondents = objRespondentDAOImpl.GetRespondentByDynamicSearch(querySearchStr);
+
+                if (objListRespondents == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return objListRespondents;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        
+
         public Respondent GetRespondentById(int respondentId)
         {
             try
@@ -110,12 +133,14 @@ namespace Model
             }
         }
 
-        public Respondent InsertRespondent(string name, string lastName, DateTime dob, string phone)
+        
+
+        public Respondent InsertRespondent(string name, string lastName, DateTime dob, string phone, string email)
         {
             try
             {
                 IRespondentDAO objRespondentDAOImpl = new RespondentDAOImpl();
-                Respondent respondentStatus = objRespondentDAOImpl.InsertRespondent(name, lastName, dob, phone);
+                Respondent respondentStatus = objRespondentDAOImpl.InsertRespondent(name, lastName, dob, phone, email);
 
                 return respondentStatus;
             }

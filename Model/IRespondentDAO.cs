@@ -16,7 +16,8 @@ namespace Model
 
         Respondent GetRespondentById(int respondentId);
 
-        Respondent InsertRespondent(string name, string lastName, DateTime dob, string phone);
+        List<Respondent> GetRespondentByDynamicSearch(string querySearchStr);
+        Respondent InsertRespondent(string name, string lastName, DateTime dob, string phone, string email);
 
         Respondent InsertRespondent(Respondent respondent);
 

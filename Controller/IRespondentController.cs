@@ -16,7 +16,10 @@ namespace Controller
 
         RespondentDTO GetRespondentById(int respondentId);
 
-        RespondentDTO InsertRespondent(string name, string lastName, DateTime dob, string phone);
+        List<RespondentDTO> GetRespondentByDynamicSearch(string querySearchStr);
+
+
+        RespondentDTO InsertRespondent(string name, string lastName, DateTime dob, string phone, string email);
 
         RespondentDTO InsertRespondent(RespondentDTO respondent);
 

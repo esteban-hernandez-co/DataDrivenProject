@@ -13,6 +13,7 @@ namespace Controller
         int respondentId;
         string respondentName;
         string respondentLastName;
+        string email;
         DateTime dob;
         string phoneNumber;
         DateTime createdAt;
@@ -24,6 +25,9 @@ namespace Controller
         public string RespondentLastName { get => respondentLastName; set => respondentLastName = value; }
         public DateTime Dob { get => dob; set => dob = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
+
+        public string Email { get => email; set => email = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
+        
     }
 }

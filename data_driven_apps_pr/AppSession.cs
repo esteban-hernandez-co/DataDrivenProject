@@ -70,5 +70,37 @@ namespace data_driven_apps_pr
         {
             HttpContext.Current.Session["Questionnaire"] = _questionnaire;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static UserDTO getUserSession()
+        {
+            if (HttpContext.Current.Session["User"] == null)
+            {
+                HttpContext.Current.Session["User"] = new UserDTO();
+            }
+            return (UserDTO)HttpContext.Current.Session["User"];
+        }
+
+        public static void setUserSession(UserDTO userDTO)
+        {
+            HttpContext.Current.Session["User"] = userDTO;
+        }
+
+        public static int getCurrentSearchQuestionNumber()
+        {
+            if (HttpContext.Current.Session["CurrentSearchQuestionNumber"] == null)
+            {
+                HttpContext.Current.Session["CurrentSearchQuestionNumber"] = 2;
+            }
+            return (int)HttpContext.Current.Session["CurrentSearchQuestionNumber"];
+        }
+
+        public static void setCurrentSearchQuestionNumber(int _numberSearch)
+        {
+            HttpContext.Current.Session["CurrentSearchQuestionNumber"] = _numberSearch;
+        }
     }
 }

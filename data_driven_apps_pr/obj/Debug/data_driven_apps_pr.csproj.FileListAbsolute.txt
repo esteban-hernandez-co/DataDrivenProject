@@ -1,3 +1,5 @@
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.csprojAssemblyReference.cache
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.csproj.CoreCompileInputs.cache
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\data_driven_apps_pr.dll.config
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\data_driven_apps_pr.dll
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\data_driven_apps_pr.pdb
@@ -50,15 +52,13 @@ C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\rosl
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\roslyn\vbc.rsp
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\roslyn\VBCSCompiler.exe
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Controller.dll
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.dll
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Controller.pdb
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.csprojAssemblyReference.cache
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.csproj.CoreCompileInputs.cache
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.pdb
+C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.dll.config
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.csproj.CopyComplete
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.dll
 C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\obj\Debug\data_driven_apps_pr.pdb
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Controller.dll
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.dll
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Controller.pdb
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.pdb
-C:\Users\esteban.h\source\repos\data_driven_apps_pr\data_driven_apps_pr\bin\Model.dll.config

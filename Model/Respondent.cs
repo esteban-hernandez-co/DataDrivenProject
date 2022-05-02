@@ -13,6 +13,7 @@ namespace Model
         string respondentLastName;
         DateTime dob;
         string phoneNumber;
+        string email;
         DateTime createdAt;
 
         public int RespondentId { get => respondentId; set => respondentId = value; }
@@ -21,5 +22,6 @@ namespace Model
         public DateTime Dob { get => dob; set => dob = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
+        public string Email { get => email; set => email = value; }
     }
 }

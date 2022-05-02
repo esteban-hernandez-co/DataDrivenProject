@@ -80,7 +80,7 @@ namespace data_driven_apps_pr.Respondent
                 {
                     //create anonymous respondent
                     IRespondentController respondentController = new RespondentControllerImpl();
-                    RespondentDTO respondentDTO = respondentController.InsertRespondent("Anonymous", "Anonymous", new DateTime(), "");
+                    RespondentDTO respondentDTO = respondentController.InsertRespondent("Anonymous", "Anonymous", new DateTime(), "", "");
 
                     //if respondent is saved
                     if (respondentDTO.RespondentId > 0)

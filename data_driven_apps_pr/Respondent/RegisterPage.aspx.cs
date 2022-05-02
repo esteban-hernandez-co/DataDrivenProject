@@ -30,11 +30,12 @@ namespace data_driven_apps_pr.Respondent
                 string lastName = txtLastName.Text;
                 string phone = txtPhone.Text;
                 string dob_str = txtDob.Text;
+                string email = txtEmail.Text;
 
                 DateTime dob = Convert.ToDateTime(dob_str);
                 //create respondent
                 IRespondentController respondentController = new RespondentControllerImpl();
-                RespondentDTO respondentDTO = respondentController.InsertRespondent(firstName, lastName, dob, phone);
+                RespondentDTO respondentDTO = respondentController.InsertRespondent(firstName, lastName, dob, phone, email);
 
                 //if respondent is saved
                 if (respondentDTO.RespondentId > 0)

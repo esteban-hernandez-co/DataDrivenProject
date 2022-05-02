@@ -72,13 +72,16 @@
     <Content Include="Index.aspx" />
     <Content Include="js\app.js" />
     <Content Include="js\jquery.js" />
-    <Content Include="Login.aspx" />
+    <Content Include="Staff\Login.aspx" />
     <Content Include="Question.aspx" />
     <Content Include="Question2.aspx" />
     <Content Include="Respondent\RegisterPage.aspx" />
     <Content Include="Respondent\SurveySummary.aspx" />
     <Content Include="Respondent\ThankYou.aspx" />
-    <Content Include="StaffSearch.aspx" />
+    <Content Include="Staff\Logout.aspx" />
+    <Content Include="Staff\Respondents.aspx" />
+    <Content Include="Staff\Search.aspx" />
+    <Content Include="Staff\StaffSearch.aspx" />
     <Content Include="Respondent\Survey.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -99,11 +102,11 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Staff\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Staff\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,11 +145,39 @@
     <Compile Include="Respondent\ThankYou.aspx.designer.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StaffSearch.aspx.cs">
+    <Compile Include="Staff\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Respondents.aspx.cs">
+      <DependentUpon>Respondents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Respondents.aspx.designer.cs">
+      <DependentUpon>Respondents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffMaster.Master.cs">
+      <DependentUpon>StaffMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffMaster.Master.designer.cs">
+      <DependentUpon>StaffMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffSearch.aspx.cs">
       <DependentUpon>StaffSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StaffSearch.aspx.designer.cs">
+    <Compile Include="Staff\StaffSearch.aspx.designer.cs">
       <DependentUpon>StaffSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Respondent\Survey.aspx.cs">
@@ -156,6 +187,7 @@
     <Compile Include="Respondent\Survey.aspx.designer.cs">
       <DependentUpon>Survey.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <Compile Include="Webiste.Master.cs">
       <DependentUpon>Webiste.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Staff\StaffMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -180,6 +213,7 @@
       <Name>Controller</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

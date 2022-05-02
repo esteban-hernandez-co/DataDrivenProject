@@ -15,6 +15,15 @@ namespace data_driven_apps_pr
     {
 
         /// <summary>
+        /// MasterTemplate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead MasterTemplate;
+
+        /// <summary>
         /// head control.
         /// </summary>
         /// <remarks>
