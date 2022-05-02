@@ -214,8 +214,7 @@ namespace data_driven_apps_pr
 
                     if (objSqlDataReaderResult.HasRows)
                     {
-
-
+                        //title table
                         DataTable dataTable = new DataTable();
                         dataTable.Columns.Add("Id", System.Type.GetType("System.String"));
                         dataTable.Columns.Add("Name", System.Type.GetType("System.String"));
@@ -225,7 +224,7 @@ namespace data_driven_apps_pr
                         dataTable.Columns.Add("Phone", System.Type.GetType("System.String"));
                         dataTable.Columns.Add("Created At", System.Type.GetType("System.String"));
 
-
+                        ArrayList listRespondentsId = new ArrayList();
                         DataRow myRow;
                         while (objSqlDataReaderResult.Read())
                         {
@@ -246,7 +245,12 @@ namespace data_driven_apps_pr
                             myRow["Phone"] = objSqlDataReaderResult["phone_number"].ToString();
                             myRow["Created At"] = objSqlDataReaderResult["created_at"].ToString();
 
-                            dataTable.Rows.Add(myRow);
+                            if (!listRespondentsId.Contains(objSqlDataReaderResult["id"].ToString()))
+                            {
+                                dataTable.Rows.Add(myRow);
+                                listRespondentsId.Add(objSqlDataReaderResult["id"].ToString());
+                            }
+                            
 
                         }
                         DataGridResult.CssClass = "table table-hover table-responsive";

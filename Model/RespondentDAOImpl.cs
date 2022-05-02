@@ -66,6 +66,7 @@ namespace Model
                         objRespondent.PhoneNumber = row["phone_number"].ToString();
                         objRespondent.Dob = Convert.ToDateTime(row["dob"].ToString());
                         objRespondent.CreatedAt = Convert.ToDateTime(row["created_at"].ToString());
+                        objRespondent.Email = row["email"].ToString();
 
                         lstRespondents.Add(objRespondent);
 

@@ -52,6 +52,7 @@ namespace Controller
                         objRespondentDTO.Dob = objRespondent.Dob;
                         objRespondentDTO.PhoneNumber = objRespondent.PhoneNumber;
                         objRespondentDTO.CreatedAt = objRespondent.CreatedAt;
+                        objRespondentDTO.Email = objRespondent.Email;
 
                         lstRespondentsToShow.Add(objRespondentDTO);
                     }
