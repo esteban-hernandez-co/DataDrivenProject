@@ -155,16 +155,40 @@
             $('.form-select').select2();
         }
 
-        $('#myform').submit(function () {
-            validateForm();
+        $('form').submit(function () {
+            return validateForm();
         });
 
         function validateForm() {
-            for (const el of document.getElementById('form').querySelectorAll("[required]")) {
-                if (!el.reportValidity()) {
-                    return;
+
+            let empty_elems = [];
+            fieldEmptyNumber = 0;
+            $("select, input:text, textarea").each(function () {
+
+                // Check if the element is empty
+                if ($(this).val().length < 1 || $(this).val() == 0) {
+                    // Access the empty element
+                    $(this).css(
+                        "border", "1px red dotted"
+                    );
+                    // Add the elements to the list
+                    empty_elems += "<li>" +
+                        ($(this).get(0).tagName) + "</li>";
+                    fieldEmptyNumber++;
                 }
-            }
+                else {
+                    // Access the non-empty element
+                    $(this).css(
+                        "border", ""
+                    );
+                }
+            });
+            $("#message").html(empty_elems);
+           
+
+            return (fieldEmptyNumber < 1);
+            
+            
         }
 
 
@@ -177,6 +201,7 @@
                         <h1 class="title">Search</h1>
                     </div>
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="#CC3300" />
+                    <div id="message" style="color: #CC3300;"></div>
                     <div id="questionControls">
 
                     

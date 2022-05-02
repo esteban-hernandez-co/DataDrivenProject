@@ -16,17 +16,11 @@ namespace data_driven_apps_pr
 {
     public partial class StaffSearch : System.Web.UI.Page
     {
-        protected void Page_PreInit(object sender, EventArgs e)
-        {
-            List<string> keys = Request.Form.AllKeys.Where(key => key.Contains("question")).ToList();
-            int i = 1;
-            foreach (string key in keys)
-            {
-                //this.CreateRow(i);
-                i++;
-            }
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             //no user found, redirects to Index
@@ -58,6 +52,11 @@ namespace data_driven_apps_pr
             }
         }
         
+        /// <summary>
+        /// Not in use
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void BtnAdd_Click(object sender, EventArgs e)
         {
             //validate no errors are on form
